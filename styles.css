@@ -31,6 +31,9 @@ h1 {
   display: block;
   width: 50%;
   border-radius: 20px;
+  box-shadow: 10px 10px;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1);
 }
 
 .input::placeholder {
@@ -39,6 +42,11 @@ h1 {
 
 .input:focus {
   outline-color: rgb(128, 0, 255);
+}
+
+.input:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0.95)
 }
 
 #passwordStrength {
