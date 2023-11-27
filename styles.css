@@ -63,7 +63,7 @@ button {
   font-size: 1.5rem;
   padding: 0.8rem 1.5rem;
   display: block;
-  width: 30%;
+  width: 25%;
   border-radius: 20px;
   box-shadow: 10px 5px;
   transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
@@ -76,3 +76,47 @@ button:hover {
   transition: transform 0.3s ease-in-out;
   transform: scale(0.95);
 }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+      cursor: help; /* Changes cursor to pointer */
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 500px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 20px;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    .tooltip-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-bottom: 690px;
+      margin-right: 700px;
+      width: 1%;
+      background-color: #fff9f9;
+      box-shadow: 5px 1px;
+      border-radius: 20px;
+      color: #000000;
+      border: none;
+    }
