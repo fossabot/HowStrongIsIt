@@ -2,6 +2,7 @@ const passwordInput = document.getElementById('passwordInput');
 const passwordStrength = document.getElementById('passwordStrength');
 const generatePasswordBtn = document.getElementById('generatePasswordBtn');
 
+
 passwordInput.addEventListener('input', function () {
   const password = passwordInput.value;
   const strength = checkPasswordStrength(password);
@@ -91,3 +92,12 @@ function displayPasswordStrength(strength) {
 function redirectToRecommended() {
   window.location.href = 'recommended.html';
 }
+
+// Get the dark mode toggle icon
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+// Add an event listener for the toggle icon
+darkModeToggle.addEventListener('click', function() {
+  // Toggle the 'dark-mode' class on the body
+  document.body.classList.toggle('dark-mode');
+});
