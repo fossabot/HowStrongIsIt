@@ -53,3 +53,26 @@ h1 {
     color: green;
     margin-top: 30px;
   }
+
+button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border: none;
+  color: #444;
+  font-size: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  display: block;
+  width: 30%;
+  border-radius: 20px;
+  box-shadow: 10px 5px;
+  transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+  transform: scale(1);
+  cursor: pointer;
+}
+
+/* Hover effect */
+button:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0.95);
+}

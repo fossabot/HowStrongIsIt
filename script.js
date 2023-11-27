@@ -1,5 +1,6 @@
 const passwordInput = document.getElementById('passwordInput');
 const passwordStrength = document.getElementById('passwordStrength');
+const generatePasswordBtn = document.getElementById('generatePasswordBtn');
 
 passwordInput.addEventListener('input', function () {
   const password = passwordInput.value;
@@ -8,14 +9,44 @@ passwordInput.addEventListener('input', function () {
 });
 
 function checkPasswordStrength(password) {
+  const patterns = {
+    repeatingChars: /(.)\1{2,}/, // Pattern to check for repeating characters
+    sequentialNumbers: /123|234|345|456|567|678|789|987|876|765|654|543|432|321/g, 
+    sequentialLetters: /abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz|zyx|yxw|xwv|wvu|vut|uts|tsr|srq|rqp|qpo|pon|onm|nml|mlk|lkj|kji|jih|ihg|hgf|gfe|fed|edc|dcb|cba/gi
+  };
+
   if (password.length >= 16) {
-    return 'very strong';
+    if (patterns.repeatingChars.test(password)) {
+      return "don't use repeating characters!";
+    } else if (patterns.sequentialNumbers.test(password) || patterns.sequentialLetters.test(password)) {
+      return "don't use sequences like this!";
+    } else {
+      return 'very strong';
+    }
   } else if (password.length >= 12) {
-    return 'strong';
+    if (patterns.repeatingChars.test(password)) {
+      return "don't use repeating characters!";
+    } else if (patterns.sequentialNumbers.test(password) || patterns.sequentialLetters.test(password)) {
+      return "don't use sequences like this!";
+    } else {
+      return 'strong';
+    }
   } else if (password.length >= 8) {
-    return 'moderate';
+    if (patterns.repeatingChars.test(password)) {
+      return "Don't use repeating characters!";
+    } else if (patterns.sequentialNumbers.test(password) || patterns.sequentialLetters.test(password)) {
+      return "don't use sequences like this!";
+    } else {
+      return 'moderate';
+    }
   } else if (password.length >= 6) {
-    return 'weak';
+    if (patterns.repeatingChars.test(password)) {
+      return "don't use repeating characters!";
+    } else if (patterns.sequentialNumbers.test(password) || patterns.sequentialLetters.test(password)) {
+      return "don't use sequences like this!";
+    } else {
+      return 'weak';
+    }
   } else {
     return 'very weak';
   }
@@ -24,6 +55,10 @@ function checkPasswordStrength(password) {
 function displayPasswordStrength(strength) {
   let color = '';
   switch (strength) {
+    case "don't use repeating characters!":
+    case "don't use sequences like this!":
+      color = 'red';
+      break;
     case 'very weak':
       color = 'red';
       break;
@@ -44,6 +79,10 @@ function displayPasswordStrength(strength) {
       break;
   }
 
-  passwordStrength.textContent = `Password Strength: ${strength}`;
+  passwordStrength.textContent = `password strength: ${strength}`;
   passwordStrength.style.color = color;
+}
+
+function redirectToRecommended() {
+  window.location.href = 'recommended.html';
 }
