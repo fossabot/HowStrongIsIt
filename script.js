@@ -101,3 +101,24 @@ darkModeToggle.addEventListener('click', function() {
   // Toggle the 'dark-mode' class on the body
   document.body.classList.toggle('dark-mode');
 });
+
+let sessionTimeout;
+
+// Function to reset the session timeout
+function resetSessionTimeout() {
+  clearTimeout(sessionTimeout);
+  sessionTimeout = setTimeout(redirectTimeoutPage, 30000); // Timeout duration in milliseconds (30 seconds)
+}
+
+// Function to redirect to timeout.html
+function redirectTimeoutPage() {
+  window.location.href = 'timeout.html';
+}
+
+// Event listeners to reset the session timeout on user interaction
+document.addEventListener('mousemove', resetSessionTimeout);
+document.addEventListener('keypress', resetSessionTimeout);
+document.addEventListener('click', resetSessionTimeout);
+
+// Initial call to start the session timeout countdown
+resetSessionTimeout();
