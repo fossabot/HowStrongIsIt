@@ -15,7 +15,9 @@ function checkPasswordStrength(password) {
     sequentialLetters: /abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz|zyx|yxw|xwv|wvu|vut|uts|tsr|srq|rqp|qpo|pon|onm|nml|mlk|lkj|kji|jih|ihg|hgf|gfe|fed|edc|dcb|cba/gi
   };
 
-  if (password.length >= 16) {
+  if (password.length >= 20 && /[a-z]/.test(password) && /[A-Z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) {
+    return 'unbreakable';
+  } else if (password.length >= 16) {
     if (patterns.repeatingChars.test(password)) {
       return "don't use repeating characters!";
     } else if (patterns.sequentialNumbers.test(password) || patterns.sequentialLetters.test(password)) {
@@ -74,7 +76,10 @@ function displayPasswordStrength(strength) {
     case 'very strong':
       color = 'darkgreen';
       break;
-    default:
+    case 'unbreakable':
+    color = 'violet';
+    break;
+     default:
       color = 'black';
       break;
   }
