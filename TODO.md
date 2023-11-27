@@ -24,6 +24,8 @@ Completed (✅):
 
 ✅ - Add a custom scrollbar
 
+✅ - Add a toggle for dark mode
+
 To-do:
   
 - Add widgets
