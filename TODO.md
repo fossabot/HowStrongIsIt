@@ -22,8 +22,12 @@ Completed (✅):
 
 ✅ - Add more buttons (partially done)
 
+✅ - Add a custom scrollbar
+
 To-do:
   
 - Add widgets
 
 - Style the page more
+
+- Add animation fade-in's/transitions to most elements on the page!
