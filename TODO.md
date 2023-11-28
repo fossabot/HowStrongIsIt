@@ -36,12 +36,10 @@ Completed (✅):
 
 ✅ - Create an extensive README
 
---------------------
-To-do for 28/11/23:
-
-- Make a markdown file which has the contents of recommended.html + a little bit more detail and/or images.
+✅ - Make a markdown file which has the contents of recommended.html + a little bit more detail and/or images.
+    
     - For this one, add a few images, such as the title at the top of the HTML version as an image,  
+   
     - Images of how a password should look, and how it shouldn't look.
+   
     - Code snippets via CodeSnap VSC extension (right-click, scroll down on the right click)
-
-- Format TODO.md and CHANGELOG.md better
