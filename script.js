@@ -93,14 +93,27 @@ function redirectToRecommended() {
   window.location.href = 'recommended.html';
 }
 
-// Get the dark mode toggle icon
 const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
 
-// Add an event listener for the toggle icon
 darkModeToggle.addEventListener('click', function() {
-  // Toggle the 'dark-mode' class on the body
-  document.body.classList.toggle('dark-mode');
+  body.classList.toggle('dark-mode');
+  const isDarkMode = body.classList.contains('dark-mode');
+  localStorage.setItem('darkMode', isDarkMode);
 });
+
+function loadDarkModePreference() {
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+  if (isDarkMode) {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+  }
+}
+
+// Call the function to load the user's dark mode preference on page load
+loadDarkModePreference();
+
 
 let sessionTimeout;
 
