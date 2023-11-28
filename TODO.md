@@ -32,13 +32,12 @@ Completed (✅):
 
 ✅ - Add widgets to other HTML pages
 
+✅ - Fix any outstanding issues
+
+✅ - Create an extensive README
 
 --------------------
 To-do for 28/11/23:
-
-- Fix any outstanding issues
-
-- Create an extensive README
 
 - Make a markdown file which has the contents of recommended.html + a little bit more detail and/or images.
     - For this one, add a few images, such as the title at the top of the HTML version as an image,  
