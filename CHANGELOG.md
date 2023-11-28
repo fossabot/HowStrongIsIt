@@ -48,3 +48,15 @@
     - If the user is inactive for 30 seconds, the page will load a HTML page "timeout.html" which displays a message that the page has been closed for security reasons, and provides a redirect link back to the main page
 
 ✅ - Mostly the same as the last page
+
+28/11/23:
+
+**V1.2**
+
+✅ - Created an extensive README
+
+✅ - Made a markdown file which has the contents of recommended.html + a little bit more detail and/or images.
+
+✅ - Slight adjustments
+
+✅ - Added reference to PASSWORD-PRACTISES.md on recommended.html page
