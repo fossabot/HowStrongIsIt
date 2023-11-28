@@ -1,6 +1,5 @@
 const passwordInput = document.getElementById('passwordInput');
 const passwordStrength = document.getElementById('passwordStrength');
-const generatePasswordBtn = document.getElementById('generatePasswordBtn');
 
 
 passwordInput.addEventListener('input', function () {
