@@ -1,6 +1,7 @@
 <div align="center">
 
 ![Logo](https://cdn.discordapp.com/attachments/892836872118763543/1179125566360793251/HowStrongIsIt-Logo.png?ex=6578a542&is=65663042&hm=7d853bbe01a769f7ce552f9c57f7701fbc7832970b2d2fcda704a5d1e487a19c&)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Finttter%2FHowStrongIsIt.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Finttter%2FHowStrongIsIt?ref=badge_shield)
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/inttter/HowStrongIsIt/blob/main/LICENSE) 
 [![Last Commit](https://img.shields.io/github/last-commit/inttter/HowStrongIsIt?style=flat-square)](https://github.com/inttter/HowStrongIsIt/commits/main)
@@ -54,6 +55,9 @@ Want to contribute? Fork the repository and submit a pull request!
 [HowStrongIsIt](https://github.com/inttter/HowStrongIsIt) is licensed under the MIT License.
 
 See the [LICENSE](LICENSE) file for more information.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Finttter%2FHowStrongIsIt.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Finttter%2FHowStrongIsIt?ref=badge_large)
 
 ## ☕ Buy Me A Coffee! ☕
 
